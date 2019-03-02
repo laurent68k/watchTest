@@ -1,5 +1,5 @@
 //
-//  DetailsViewController.swift
+//  MoreDetailsInterfaceController.swift
 //  watchTest WatchKit Extension
 //
 //  Created by Laurent Favard on 02/03/2019.
@@ -9,17 +9,16 @@
 import Foundation
 import WatchKit
 
-class DetailsInterfaceController : WKInterfaceController {
+class MoreDetailsInterfaceController : WKInterfaceController {
     
-    @IBOutlet weak var detailsLabel: WKInterfaceLabel!
-    
+    @IBOutlet weak var moreDetailsLabel: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         
         super.awake(withContext: context)
         
         if let value = context as? String {
             
-            self.detailsLabel.setText(value)
+            self.moreDetailsLabel.setText("About: \(value)")
         }
     }
     

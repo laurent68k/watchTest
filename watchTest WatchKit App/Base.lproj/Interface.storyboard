@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Main Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchTest_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="watchTest_WatchKit_App" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="M05-tO-hrF">
                             <items>
@@ -44,9 +44,14 @@
             <objects>
                 <controller identifier="DetailsInterfaceController" id="3lV-sr-apF" customClass="DetailsInterfaceController" customModule="watchTest_WatchKit_Extension">
                     <items>
-                        <label width="136" height="173" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="xvQ-Tv-vML">
+                        <label width="134" height="116" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="xvQ-Tv-vML">
                             <color key="textColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="More" id="hqv-re-myO">
+                            <connections>
+                                <segue destination="4zr-x7-3Sa" kind="push" id="Byg-Mc-TA3"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="detailsLabel" destination="xvQ-Tv-vML" id="K2K-01-FJO"/>
@@ -54,6 +59,23 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="418" y="83"/>
+        </scene>
+        <!--MoreDetailsInterfaceController-->
+        <scene sceneID="3sY-2Z-uyI">
+            <objects>
+                <controller identifier="MoreDetailsInterfaceController" id="4zr-x7-3Sa" customClass="MoreDetailsInterfaceController" customModule="watchTest_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="center" text="More details" textAlignment="center" id="5yT-0S-sPg">
+                            <color key="textColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label width="136" height="127" alignment="center" verticalAlignment="bottom" text="Label" textAlignment="center" id="jPh-Fu-WWu"/>
+                    </items>
+                    <connections>
+                        <outlet property="moreDetailsLabel" destination="jPh-Fu-WWu" id="Tkf-BE-gXC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="742" y="83"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

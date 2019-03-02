@@ -16,12 +16,13 @@
 		4D2C7287222A83820005138B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C7285222A83820005138B /* Interface.storyboard */; };
 		4D2C7289222A83820005138B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C7288222A83820005138B /* Assets.xcassets */; };
 		4D2C7290222A83820005138B /* watchTest WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4D2C728F222A83820005138B /* watchTest WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4D2C7295222A83820005138B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C7294222A83820005138B /* InterfaceController.swift */; };
+		4D2C7295222A83820005138B /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C7294222A83820005138B /* MainInterfaceController.swift */; };
 		4D2C7297222A83820005138B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C7296222A83820005138B /* ExtensionDelegate.swift */; };
 		4D2C7299222A83820005138B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C7298222A83820005138B /* NotificationController.swift */; };
 		4D2C729B222A83830005138B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C729A222A83830005138B /* Assets.xcassets */; };
 		4D524670222A8AAB00294E2B /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52466F222A8AAB00294E2B /* RowController.swift */; };
 		4D524672222A900C00294E2B /* DetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D524671222A900C00294E2B /* DetailsInterfaceController.swift */; };
+		4D524674222A975F00294E2B /* MoreDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D524673222A975F00294E2B /* MoreDetailsInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +80,7 @@
 		4D2C7288222A83820005138B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2C728A222A83820005138B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2C728F222A83820005138B /* watchTest WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchTest WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D2C7294222A83820005138B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4D2C7294222A83820005138B /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
 		4D2C7296222A83820005138B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4D2C7298222A83820005138B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		4D2C729A222A83830005138B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		4D2C729D222A83830005138B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4D52466F222A8AAB00294E2B /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		4D524671222A900C00294E2B /* DetailsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInterfaceController.swift; sourceTree = "<group>"; };
+		4D524673222A975F00294E2B /* MoreDetailsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailsInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,16 +155,25 @@
 		4D2C7293222A83820005138B /* watchTest WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4D2C7294222A83820005138B /* InterfaceController.swift */,
+				4D524675222A985000294E2B /* Controllers */,
 				4D2C7296222A83820005138B /* ExtensionDelegate.swift */,
 				4D2C7298222A83820005138B /* NotificationController.swift */,
 				4D2C729A222A83830005138B /* Assets.xcassets */,
 				4D2C729C222A83830005138B /* Info.plist */,
 				4D2C729D222A83830005138B /* PushNotificationPayload.apns */,
-				4D52466F222A8AAB00294E2B /* RowController.swift */,
-				4D524671222A900C00294E2B /* DetailsInterfaceController.swift */,
 			);
 			path = "watchTest WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4D524675222A985000294E2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D2C7294222A83820005138B /* MainInterfaceController.swift */,
+				4D52466F222A8AAB00294E2B /* RowController.swift */,
+				4D524671222A900C00294E2B /* DetailsInterfaceController.swift */,
+				4D524673222A975F00294E2B /* MoreDetailsInterfaceController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2C7299222A83820005138B /* NotificationController.swift in Sources */,
+				4D524674222A975F00294E2B /* MoreDetailsInterfaceController.swift in Sources */,
 				4D2C7297222A83820005138B /* ExtensionDelegate.swift in Sources */,
 				4D524670222A8AAB00294E2B /* RowController.swift in Sources */,
-				4D2C7295222A83820005138B /* InterfaceController.swift in Sources */,
+				4D2C7295222A83820005138B /* MainInterfaceController.swift in Sources */,
 				4D524672222A900C00294E2B /* DetailsInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
